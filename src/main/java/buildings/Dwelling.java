@@ -142,7 +142,7 @@ public class Dwelling {
     public DwellingFloor[] getSortFlatsBySquare(int order) {
         DwellingFloor[] sorted = floors;
         Flat array = new Flat();
-        if (order == 1) //по убыванию
+        if (order == 1) 
         {
             for (int i = 0; i < floors.length - 1; i++) {
                 for (int j = 0; j < floors.length - i - 1; j++) {
