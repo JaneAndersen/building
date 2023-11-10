@@ -13,18 +13,18 @@ public class Dwelling {
         floors = array;
     }
 
-    public int getDwellingFloorQuantity() {
+    public int getFloorsQuantity() {
         return floors.length;
     }
 
-    public int getFlatsQuantity() {
-        int quantity = 0;
-        for (int i = 0; i < floors.length; i++) {
-            quantity += floors[i].getTotalFlats();
+    public int getTotalFlats() {
+        int total = 0;
+        for (int i = 0; i < countFloor; i++) {
+             total += floor.getTotalFlats();
         }
-        return quantity;
+        return total;
     }
-
+    
     public int getFlatsSquare() {
         int square = 0;
         for (int i = 0; i < floors.length; i++) {
@@ -32,8 +32,8 @@ public class Dwelling {
         }
         return square;
     }
-
-    public int getRoomsQuantity() {
+    
+     public int getFlatsQuantity() {
         int quantity = 0;
         for (int i = 0; i < floors.length; i++) {
             quantity += floors[i].getFlatsQuantity();
@@ -41,15 +41,15 @@ public class Dwelling {
         return quantity;
     }
 
-    public DwellingFloor[] getDwellingFloors() {
+    public DwellingFloor[] getFloors() {
         return floors;
     }
-
-    public DwellingFloor getDwellingFloor(int index) {
+    
+    public DwellingFloor getFloor(int index) {
         return floors[index];
     }
 
-    public void setDwellingFloor(int index, DwellingFloor newDwellingFloor) {
+    public void setFloor(int index, DwellingFloor newDwellingFloor) {
         floors[index] = newDwellingFloor;
     }
 
