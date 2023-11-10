@@ -4,7 +4,6 @@ import buildings.DwellingFloor;
 import buildings.Flat;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import java.util.Arrays;
 
 public class DwellingFloorTest
 {
