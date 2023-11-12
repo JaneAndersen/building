@@ -1,4 +1,5 @@
 package buildings;
+import buildings.Office;
 public class DwellingFloor {
     private Flat[] flats;
     
