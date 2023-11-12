@@ -1,4 +1,5 @@
 package buildings;
+import buildings.Space;
 public class Flat {
 
     private int square;
