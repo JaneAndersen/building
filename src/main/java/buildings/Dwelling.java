@@ -1,23 +1,19 @@
 package buildings;
 import buildings.Building;
 public class Dwelling implements Building{
-    private DwellingFloor[] floors;
-
+    private Floor[] floors;
     public Dwelling(int countFloor, int[] countFlat) {
-        floors = new DwellingFloor[countFloor];
+        floors = new Floor[countFloor];
         for (int i = 0; i < countFloor; i++) {
-            floors[i] = new DwellingFloor(countFlat[i]);
+            floors[i] = new Floor(countFlat[i]);
         }
     }
-
-    public Dwelling(DwellingFloor[] array) {
+    public Dwelling(Floor[] array) {
         floors = array;
     }
-
     public int getFloorsQuantity() {
         return floors.length;
     }
-
     public int getTotalFlats() {
         int total = 0;
         for (int i = 0; i < countFloor; i++) {
@@ -25,7 +21,6 @@ public class Dwelling implements Building{
         }
         return total;
     }
-    
     public int getFlatsSquare() {
         int square = 0;
         for (int i = 0; i < floors.length; i++) {
@@ -33,7 +28,6 @@ public class Dwelling implements Building{
         }
         return square;
     }
-    
      public int getFlatsQuantity() {
         int quantity = 0;
         for (int i = 0; i < floors.length; i++) {
@@ -41,22 +35,18 @@ public class Dwelling implements Building{
         }
         return quantity;
     }
-
-    public DwellingFloor[] getFloors() {
+    public Floor[] getFloors() {
         return floors;
     }
-    
-    public DwellingFloor getFloor(int index) {
+    public Floor getFloor(int index) {
         return floors[index];
     }
-
-    public void setFloor(int index, DwellingFloor newDwellingFloor) {
+    public void setFloor(int index, Floor newDwellingFloor) {
         floors[index] = newDwellingFloor;
     }
-
     public Flat getFlat(int index) {
         int number = 0;
-        Flat fl = new Flat();
+        Space fl = new Space();
         for (int i = 0; i < floors.length; i++) {
             for (int j = 0; j < floors[i].getFlats().length; j++) {
                 if (number == index) fl = floors[i].getFlats()[j];
@@ -65,8 +55,7 @@ public class Dwelling implements Building{
         }
         return fl;
     }
-
-    public void setFlat(int index, Flat newFlat) {
+    public void setFlat(int index, Space newFlat) {
         int number=0;
         for(int i=0; i<floors.length; i++) {
             for(int j=0; j<floors[i].getFlats().length;j++) {
@@ -75,8 +64,7 @@ public class Dwelling implements Building{
             }
         }
     }
-
-    public void addFlat(int index, Flat newFlat) {
+    public void addFlat(int index, Space newFlat) {
         int number = 0;
         for (int i = 0; i < floors.length; i++) {
             for (int j = 0; j < floors[i].getFlats().length; j++) {
@@ -84,10 +72,9 @@ public class Dwelling implements Building{
             }
         }
     }
-
     public void deleteFlat(int index) {
         int ind = index;
-        for (DwellingFloor floor : floors) {
+        for (Floor floor : floors) {
             int count = floor.getTotalFlats();
             if (ind < count) {
                 floor.deleteFlat(ind);
@@ -97,7 +84,6 @@ public class Dwelling implements Building{
             }
         }
     }
-
     public int getBestFlatBySquare() {
         int number = 0;
         int maxIndex = 0;
@@ -114,9 +100,9 @@ public class Dwelling implements Building{
         return maxIndex;
     }
 
-    public DwellingFloor[] getSortFlatsBySquare(int order) {
-        DwellingFloor[] sorted = floors;
-        Flat array = new Flat();
+    public Floor[] getSortFlatsBySquare(int order) {
+        Floor[] sorted = floors;
+        Space array = new Space();
         if (order == 1) {
             for (int i = 0; i < floors.length - 1; i++) {
                 for (int j = 0; j < floors.length - i - 1; j++) {
