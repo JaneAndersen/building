@@ -1,16 +1,16 @@
 package buildings;
 import buildings.Office;
-public class DwellingFloor {
-    private Flat[] flats;
+public class OfficeFloor implements Floor {
+    private Space[] flats;
     
-    public DwellingFloor(int count) {
-        flats = new Flat[count];
+    public OfficeFloor(int count) {
+        flats = new Space[count];
         for (int i=0; i<count; i++) {
-            flats[i]= new Flat();
+            flats[i]= new Space();
         }
     }
     
-    public DwellingFloor(Flat[] array) {
+    public OfficeFloor(Space[] array) {
         flats= array;
     }
     
@@ -34,22 +34,22 @@ public class DwellingFloor {
         return quantity;
     }
     
-    public Flat[] getFlats() {
+    public Space[] getFlats() {
         return flats;
     }
     
-    public Flat getFlat(int index) {
+    public Space getFlat(int index) {
         return flats[index];
     }
     
-    public void setFlat(int index, Flat newFlat) {
+    public void setFlat(int index, Space newFlat) {
         if (index >= 0 && index < flats.length)
             flats[index] = newFlat;
     }
     
-    public void addFlat(int index, Flat newFlat) {
+    public void addFlat(int index, Space newFlat) {
         if (index >= 0 && index <= flats.length) {
-            Flat[] newFlats = new Flat[flats.length + 1];
+            Space[] newFlats = new Space[flats.length + 1];
             for (int i = 0; i < index; i++) {
                 newFlats[i] = flats[i];
             }
@@ -63,7 +63,7 @@ public class DwellingFloor {
     
     public void deleteFlat(int index) {
         if (index >= 0 && index < flats.length) {
-            Flat[] newFlats = new Flat[flats.length - 1];
+            Space[] newFlats = new Space[flats.length - 1];
             for (int i = 0, j = 0; i < flats.length; i++) {
                 if (i != index) {
                     newFlats[j++] = flats[i];
