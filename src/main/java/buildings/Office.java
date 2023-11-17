@@ -1,6 +1,6 @@
 package buildings;
 import buildings.Space;
-public class Flat {
+public class Flat implements buildings.Space{
 
     private int square;
     private int quantity;
