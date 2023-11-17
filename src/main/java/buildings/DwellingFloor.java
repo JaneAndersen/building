@@ -1,6 +1,6 @@
 package buildings;
 import buildings.Office;
-public class DwellingFloor {
+public class DwellingFloor implements Office{
     private Flat[] flats;
     
     public DwellingFloor(int count) {
