@@ -84,7 +84,7 @@ public class Dwelling implements Building{
             }
         }
     }
-    public int getBestFlatBySquare() {
+    public Space getBestFlatBySquare() {
         int number = 0;
         int maxIndex = 0;
         int maxSquare = 0;
