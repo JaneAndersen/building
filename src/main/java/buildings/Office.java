@@ -1,32 +1,13 @@
 package buildings;
 import buildings.Space;
-public class Flat implements Space{
-
-    private int square;
-    private int quantity;
-    public static final int SQUARE=50, QUANTITY=2;
-    public Flat() {
-        square=50;
-        quantity=2;
+public class Office extends AbstractSpace implements Space {
+    public Office() {
+        super();
     }
-    public Flat(int sq) {
-        square=sq;
-        quantity=2;
+    public Office(int sq) {
+        super(sq);
     }
-    public Flat(int sq, int q) {
-        square=sq;
-        quantity=q;
-    }
-    public int getSquare() {
-        return square;
-    }
-    public void setSquare(int square) {
-        this.square=square;
-    }
-    public int getQuantity() {
-        return quantity;
-    }
-    public void setQuantity(int quantity) {
-        this.quantity=quantity;
+    public Office(int sq, int q) {
+        super(sq,q);
     }
 }
