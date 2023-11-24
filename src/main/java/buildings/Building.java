@@ -1,4 +1,6 @@
-interface Building {
+package buildings;
+
+public interface Building {
   int getFloorsQuantity();
   int getTotalFlats();
   int getFlatsSquare();
@@ -11,5 +13,5 @@ interface Building {
   void addFlat(int index, Space newSpace);
   void deleteFlat(int index);
   Space getBestSpaceBySquare();
-  Space[] getSortSpacesBySquare(int order);
+  Floor[] getSortSpacesBySquare(int order);
 }

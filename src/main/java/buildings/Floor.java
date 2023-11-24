@@ -1,3 +1,5 @@
+package buildings;
+
 public interface Floor {
   int getTotalFlats();
   int getFlatsSquare();

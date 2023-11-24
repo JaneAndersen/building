@@ -1,5 +1,5 @@
-package buildings;
-import buildings.Floor;
+package buildings.impl;
+import buildings.*;
 public class DwellingFloor implements Floor {
     private Space[] flats;
     public DwellingFloor(int count) {

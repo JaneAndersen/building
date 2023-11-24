@@ -1,4 +1,5 @@
-package buildings;
+package buildings.impl;
+import buildings.*;
 public class Flat extends AbstractSpace implements Space {
     private int sq, q;
     public Flat() {

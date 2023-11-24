@@ -1,5 +1,5 @@
-package buildings;
-import buildings.Office;
+package buildings.impl;
+import buildings.*;
 
 public class OfficeFloor implements Floor {
     private Space[] flats;

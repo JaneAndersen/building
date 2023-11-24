@@ -1,5 +1,5 @@
-package buildings;
-import buildings.Building;
+package buildings.impl;
+import buildings.*;
 
 public class OfficeDwelling implements Building {
     private Floor[] floors;

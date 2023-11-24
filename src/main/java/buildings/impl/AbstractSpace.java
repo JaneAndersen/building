@@ -1,4 +1,4 @@
-package buildings;
+package buildings.impl;
 import lombok.Data;
 @Data
 public abstract class AbstractSpace{

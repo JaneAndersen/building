@@ -1,7 +1,8 @@
+package buildings;
 /*Создайте экземпляр многоэтажный жилого дома с различными произвольными значениями количества квартир по этажам,
 а также площадей и количества комнат в квартирах.
 Вызовите все методы класса Dwelling и убедитесь в корректности выводимых результатов.*/
-import buildings.*;
+import buildings.impl.*;
 
 public class Main
 {
@@ -23,22 +24,22 @@ public class Main
         DwellingFloor floor2 = new DwellingFloor(new Flat[]{flat6, flat7, flat8});
         DwellingFloor floor3 = new DwellingFloor(new Flat[]{flat9, flat10, flat11, flat12});
         Dwelling dwell = new Dwelling(new DwellingFloor[]{floor1, floor2, floor3});
-        int countFloors=dwell.getDwellingFloorQuantity();
+        int countFloors=dwell.getFloorsQuantity();
         System.out.println(countFloors);
         System.out.println(dwell.getFlatsQuantity());
         System.out.println(dwell.getFlatsSquare());
-        System.out.println(dwell.getRoomsQuantity());
-        DwellingFloor[] arrayFloors = dwell.getDwellingFloors();
-        DwellingFloor DFloor = dwell.getDwellingFloor(2);
-        dwell.setDwellingFloor(1, DFloor);
+        System.out.println(dwell.getFloorsQuantity());
+        Floor[] arrayFloors = dwell.getFloors();
+        Floor DFloor = dwell.getFloor(2);
+        dwell.setFloor(1, DFloor);
         dwell.getFlat(5);
         Flat newFlat = new Flat(30,2);
         dwell.setFlat(8, newFlat);
         dwell.addFlat(1, newFlat);
         dwell.deleteFlat(10);
-        System.out.println(dwell.getBestFlatBySquare());
-        dwell.getSortFlatsBySquare(1);
-        dwell.getSortFlatsBySquare(-1);
+        System.out.println(dwell.getBestSpaceBySquare());
+        dwell.getSortSpacesBySquare(1);
+        dwell.getSortSpacesBySquare(-1);
         System.out.println();
     }
 }

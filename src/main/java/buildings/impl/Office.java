@@ -1,5 +1,5 @@
-package buildings;
-import buildings.Space;
+package buildings.impl;
+import buildings.*;
 public class Office extends AbstractSpace implements Space {
     private int sq,q;
     public Office() {

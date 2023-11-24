@@ -1,7 +1,7 @@
 package buildings.dwellingFloor;
 
-import buildings.DwellingFloor;
-import buildings.Flat;
+import buildings.impl.*;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
